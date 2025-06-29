@@ -2,31 +2,30 @@
   <head>
     <title>Background Color</title>
   </head>
-  <body style= "background-color: pink"> <! Makes the background of this page pink >
+  <body style= "background-color: lightgreen"> <! This will make the background color of this page green >
 
-    <h1> Poverty Page </h1> <! The title for this page>
+    <h1> Wealth Page </h1> <! Heading for the Wealth Page bolded>
     <p> </p>
 
-    <img src="https://media.giphy.com/media/ZGH8VtTZMmnwzsYYMf/giphy.gif" width="480" height="269" alt="Empty Pockets">
-    <p> https://media.giphy.com/media/ZGH8VtTZMmnwzsYYMf/giphy.gif <p>
+    <img src="https://media.giphy.com/media/XZkqrQeqkxelW/giphy.gif" width="480" height="254" alt="Money GIF">
+    <p> https://media.giphy.com/media/XZkqrQeqkxelW/giphy.gif <p> <! Link for the gif >
     <p> </p>
 
-    <b> Poverty Overview </b> 
+    <b> Wealth Overview </b>
     <p> </p>
 
-    <b> What is poverty, and how do people go into poverty?</b> <! First question for this page >
-    <p> Poverty is a condition when a person doesn't have enough money for basic living. There are about 37 million people in the United States who live in poverty. 16.2% of those in poverty are children, and 9.7% of them are senior citizens. </p> <! Two paragraphs that answer the question above>
-    <p> There are multiple ways people go into poverty. Poverty is caused by low wages and unemployment. Many people can't make enough money.  Limited education is something common with people in poverty; limited education leads to a lack of opportunities in the workforce. Not allowing those with limited education to get high-paying jobs. Another cause of poverty is housing, with homes being too expensive. Healthcare being expensive also pushes people towards poverty. Unfortunately, sometimes people go into poverty because of their family or generational poverty. Wasting money and not being educated about finance causes poverty. Unexpected life events like car accidents, rapid health decline, getting fired from work, etc, are all events that can cause poverty. These are all ways people go into poverty, but there is hope to prevent it. </p>
+    <b> How do people become Wealthy? </b> <! First Bolded Question >
+    <p> People, in many cases, become wealthy from generational wealth. They get their wealth through their family. About 21% of people who are millionaires or make more, get their money from generational wealth. </p> <! Two paragraphs that answer the question >
+    <p>People who gain their wealth usually get a higher education, learning many skills. This makes you available to work in high places that pay lots of money. Another way a person may gain their wealth is by climbing up their career ladder. Starting small and getting promoted to higher and higher positions. Creating a business makes people wealthy, but this can either be very successful or fail badly; it all depends on your dedication to your business. Investing allows money to grow over time, creating wealth. Saving as much money as possible is another factor in success. People also gain wealth by having good networks and surrounding themselves with people in high positions. Through school, friends, family, etc, you can make friends with people in high positions. Good financial knowledge/ goal setting, or working with financial advisors, maybe someday you will become a millionaire.</p>
 
-    <b> Ways to prevent going into Poverty </b> <! Second question for the page >
-    <p> Try and seek as much education and gain as many skills as you can to get job opportunities. Create a financial plan that helps you manage your money and not overspend what you make. Your financial plan should work for you and only for you. Make yourself a positive and strong work ethic, making you a hard worker. Create a savings account for extra money. Try and maintain good health, like working out or eating healthy, so you won't have to spend that much money on healthcare. Don't abuse your credit cards; make a monthly budget. Monitor inflation and economics currently to see what is going on in the United States, so you are aware of what can happen with money and make adjustments before they happen.</p> <! Answers the second question for the page>
-
+    <b> Ways you can become Wealthy</b>  <! Second bolded Question>
+    <p> Get as much education and gain as many skills as you can. This will give you many job opportunities. In college, get lots of internships and surround yourself with successful businessmen or CEOs. Learn how to manage your money with many books and look into investments. Be patient, people don't get millions of dollars a night, it will take time. Building assets can help you become wealthy because assets like real estate or stocks can increase over time. </p> <! Paragraph to answer the Second Bolded Question >
     <p> </p>
 
-    <b> Choose one of the links and continue</b> <! Directs the user to the hyperlinks >
+    <b> Choose one of the links and continue</b> <! Introduces the hyperlinks>
     <p> </p>
 
-    <a href="wealth.page">Go to Wealth Page</a> <! All the code in HREF is the hyperlinks to the other pages>
+    <a href="poverty.page">Go to Poverty Page</a> <! HREF code is all the hyperlinks>
     <p> </p>
 
     <a href="welcome.page">Go to Welcome Page</a>
@@ -34,6 +33,10 @@
 
     <a href=" calculator.page">Go to Calculator Page</a>
     <p> </p>
+
+  </body>
+</html>
+
 
   </body>
 </html>
