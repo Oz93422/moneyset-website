@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <title>Background Color</title>
+  </head>
+  <body style="background-color: lightblue"> <! This will make the background of the page the color blue>
+
+    <h1> Welcome to my Website</h1> <! This is the Heading for the page>
+    <p> Hello, I am Oz and I will teach you about poverty and wealth in the United States. I will also include a calculator page to help you with your finances.</p>
+    <! Starting sentence for the page>
+
+    <img src="https://gifdb.com/images/high/counting-money-tariq-power-ghost-yvdxb8kshe09mdm9.gif" alt="Tariq St. Patrick Counting Money" style="width:300px; height:auto; margin-top:20px;"> <! Shows an image of a young person shuffling through money >
+    
+    <p> https://gifdb.com/images/high/counting-money-tariq-power-ghost-yvdxb8kshe09mdm9.gif> <! Link for the gif > </p>
+
+    <p> </p>
+    <b> TAP ONE OF THE LINKS BELOW</b> <! Bolded text to get users' attention to go to the hyperlink >
+    <p> </p>
+
+    <a href="poverty.page">Go to Poverty Page</a> <! Hyperlink for poverty page >
+    <p> </p>
+
+    <a href="wealth.page">Go to Wealth Page</a> <!Hyperlink for wealth page>
+    <p> </p>
+
+    <a href=" calculator.page">Go to Calculator Page</a> <! Hyperlink for calculator page>
+
+  </body>
+</html>
