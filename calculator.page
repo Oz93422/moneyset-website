@@ -1,0 +1,172 @@
+<html>
+  <head>
+  </head>
+  <body style= "background-color: orange"> <! makes the background of the page orange>
+
+    <h1>Annual Income and Tax Calculator</h1> <! Title the page >
+    <form>
+      <label for="annualIncome">Annual Income:</label><br> <! Label the box for entering annual income>
+      <input type="number" id="annualIncome" placeholder="Enter annual income" step="0.01"><br><br> <! allows users to enter their annual income and allows user to increase their income with side buttons >
+
+      <label for="state">Select your state:</label><br> <! allows user to choose a state  >
+      <select id="state">
+        <option value="" disabled selected>Select a state</option> <! List of states the users can select>
+        <option value="AL">Alabama</option>
+        <option value="AK">Alaska</option>
+        <option value="AZ">Arizona</option>
+        <option value="AR">Arkansas</option>
+        <option value="CA">California</option>
+        <option value="CO">Colorado</option>
+        <option value="CT">Connecticut</option>
+        <option value="DE">Delaware</option>
+        <option value="DC">District of Columbia</option>
+        <option value="FL">Florida</option>
+        <option value="GA">Georgia</option>
+        <option value="HI">Hawaii</option>
+        <option value="ID">Idaho</option>
+        <option value="IL">Illinois</option>
+        <option value="IN">Indiana</option>
+        <option value="IA">Iowa</option>
+        <option value="KS">Kansas</option>
+        <option value="KY">Kentucky</option>
+        <option value="LA">Louisiana</option>
+        <option value="ME">Maine</option>
+        <option value="MD">Maryland</option>
+        <option value="MA">Massachusetts</option>
+        <option value="MI">Michigan</option>
+        <option value="MN">Minnesota</option>
+        <option value="MS">Mississippi</option>
+        <option value="MO">Missouri</option>
+        <option value="MT">Montana</option>
+        <option value="NE">Nebraska</option>
+        <option value="NV">Nevada</option>
+        <option value="NH">New Hampshire</option>
+        <option value="NJ">New Jersey</option>
+        <option value="NM">New Mexico</option>
+        <option value="NY">New York</option>
+        <option value="NC">North Carolina</option>
+        <option value="ND">North Dakota</option>
+        <option value="OH">Ohio</option>
+        <option value="OK">Oklahoma</option>
+        <option value="OR">Oregon</option>
+        <option value="PA">Pennsylvania</option>
+        <option value="RI">Rhode Island</option>
+        <option value="SC">South Carolina</option>
+        <option value="SD">South Dakota</option>
+        <option value="TN">Tennessee</option>
+        <option value="TX">Texas</option>
+        <option value="UT">Utah</option>
+        <option value="VT">Vermont</option>
+        <option value="VA">Virginia</option>
+        <option value="WA">Washington</option>
+        <option value="WV">West Virginia</option>
+        <option value="WI">Wisconsin</option>
+        <option value="WY">Wyoming</option>
+      </select><br><br>
+
+      <button type="button" onclick="calculateTaxes()">Calculate</button> <! allows to click the button calculate and the page will print results>
+    </form>
+
+    <p id="output"></p>
+
+    <script> 
+      const stateTaxRates = 
+      { //code changes from HTML to Java 
+        //The states/DC abbreviated
+        AL: 4.0,   // Alabama 
+        AK: 0.0,   // Alaska
+        AZ: 2.5,   // Arizona
+        AR: 4.4,   // Arkansas
+        CA: 13.3,  // California
+        CO: 4.4,   // Colorado
+        CT: 6.99,  // Connecticut
+        DE: 6.6,   // Delaware
+        DC: 10.75, // District of Columbia
+        FL: 0.0,   // Florida
+        GA: 5.75,  // Georgia
+        HI: 11.0,  // Hawaii
+        ID: 6.925, // Idaho
+        IL: 4.95,  // Illinois
+        IN: 3.23,  // Indiana
+        IA: 8.53,  // Iowa
+        KS: 5.7,   // Kansas
+        KY: 5.0,   // Kentucky
+        LA: 6.0,   // Louisiana
+        ME: 7.15,  // Maine
+        MD: 5.75,  // Maryland
+        MA: 5.0,   // Massachusetts
+        MI: 4.25,  // Michigan
+        MN: 9.85,  // Minnesota
+        MS: 5.0,   // Mississippi
+        MO: 5.4,   // Missouri
+        MT: 6.75,  // Montana
+        NE: 6.84,  // Nebraska
+        NV: 0.0,   // Nevada
+        NH: 5.0,   // New Hampshire 
+        NJ: 10.75, // New Jersey
+        NM: 5.9,   // New Mexico
+        NY: 10.9,  // New York
+        NC: 4.5,   // North Carolina
+        ND: 2.9,   // North Dakota
+        OH: 4.797, // Ohio
+        OK: 5.0,   // Oklahoma
+        OR: 9.9,   // Oregon
+        PA: 3.07,  // Pennsylvania
+        RI: 5.99,  // Rhode Island
+        SC: 7.0,   // South Carolina
+        SD: 0.0,   // South Dakota
+        TN: 0.0,   // Tennessee
+        TX: 0.0,   // Texas
+        UT: 4.65,  // Utah
+        VT: 8.75,  // Vermont
+        VA: 5.75,  // Virginia
+        WA: 0.0,   // Washington
+        WV: 6.5,   // West Virginia
+        WI: 7.65,  // Wisconsin
+        WY: 0.0    // Wyoming
+      }; 
+
+      const federalTaxRate = 20.0; 
+
+      function calculateTaxes() 
+      { 
+        const annualIncome = parseFloat(document.getElementById('annualIncome').value); //gets the value from user inputted annual income
+
+        const state = document.getElementById('state').value;  //gets the selected state from the user input 
+
+        if (!annualIncome || !state)
+        {
+          document.getElementById('output').innerText = "Please enter your annual income and select a state.";
+          return; //checks to see if the user inputted a valid income and state
+        }
+
+        const stateTaxRate = stateTaxRates[state] / 100; // Converts state tax number to a decimal 
+        const federalTaxRateDecimal = federalTaxRate / 100; // Converts federal tax number to a decimal 
+
+        const stateTaxes = annualIncome * stateTaxRate; //calculates state tax amount with income
+        const federalTaxes = annualIncome * federalTaxRateDecimal;  //calculates federal tax amount with income
+        const totalTaxes = stateTaxes + federalTaxes;  //Adds both state tax and federal tax
+
+        const totalRevenue = annualIncome - totalTaxes; // Subtracts user's total income from all taxes, both state and federal
+
+        document.getElementById('output').innerText =  //shows on the page the user's total revenue after all taxes have been removed
+          `For ${state}, with an annual income of $${annualIncome.toFixed(2)}: 
+           - State Taxes: $${stateTaxes.toFixed(2)}
+           - Federal Taxes: $${federalTaxes.toFixed(2)}
+           - Total Taxes: $${totalTaxes.toFixed(2)}
+           - Total Revenue After Taxes (Yearly): $${totalRevenue.toFixed(2)}`;
+      }
+    </script>
+
+    <! Code changes from Java to HTML >
+    <b> Choose one of the links and continue</b>  <! Provides hyperlinks for the user to follow>
+
+    <p> </p>
+    <a href="wealth.page">Go to Wealth Page</a>
+    <p> </p>
+    <a href="poverty.page">Go to Poverty Page</a>
+    <p> </p>
+    <a href="welcome.page">Go to Welcome Page</a>
+
+  </body>
+</html>
